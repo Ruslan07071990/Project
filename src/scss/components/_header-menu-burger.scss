@@ -1,0 +1,62 @@
+@import '../scss/abstracts/variables';
+@import '../scss/abstracts/mixins';
+
+// .burger-menu-button {
+//     width: 44px;
+//     height: 37px;
+//     border: none;
+//     background-color: #000;
+//     padding: 0;
+//     cursor: pointer;
+//     margin: 23px 0;
+
+// }
+
+
+.menu-active {
+    width: 292px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // padding-left: 35px;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background-color: #333333;
+    position: absolute;
+    top: 103px;
+    right: 12%;
+    opacity: 1;
+    .header-nav_list-item {
+        
+        display: flex;
+        width: 100%;
+        padding-top: 29px;
+        padding-bottom: 21px;
+        border-bottom: 3px solid #3B3B3B;
+&:hover .header-nav_link{
+    border-left: 8px solid #8D81AC;
+
+    color: #8D81AC;
+}
+
+
+    }
+
+    a {
+        padding-left: 35px;
+
+    }
+}
+
+// .menu-close {
+//     position: absolute;
+//     right: 0;
+//     opacity: 0;
+// }
+
+// .opacity {
+//     opacity: 1;
+// }
