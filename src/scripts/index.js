@@ -8,6 +8,11 @@
 //     nav.classList.toggle('menu-active')
 //     closet.classList.toggle('opacity')
 // })
+
+const btn = 'header-menu_burger';
+const menu ='header-nav_list';
+const hederNav = document.querySelector('.header-nav')
+
 const burger = document.querySelector('.header-menu_burger')
 console.log(burger);
 const nav = document.querySelector('.header-nav_list')
@@ -17,7 +22,21 @@ const clouse = document.querySelector('.svg-menu_burger-clouse')
 const body = document.querySelector('body')
 
 burger.addEventListener('click', () => {
-    // burger.classList.toggle('active')
+    // burger.classList.toggle('opacity')
     nav.classList.toggle('menu-active')
-    // body.classList.toggle('lock')
+    clouse.classList.toggle('opacity')
+    // body.closest('menu-active')
 })
+
+document.addEventListener("click", ({ target }) => {
+    if (
+      !(
+        target.closest(`.${btn}`) ||
+        target.closest(`.${menu}`)
+      )
+    ) {
+    //   headerBurgerMenu.classList.remove(ACTIVE_BURGER_BUTTON_CLASS_NAME);
+      nav.classList.remove('menu-active');
+      clouse.classList.remove('opacity')
+    }
+  });
