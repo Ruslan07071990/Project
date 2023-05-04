@@ -22,23 +22,19 @@ body {
 .header {
     width: 100%;
     height: 800px;
-text-align: center;
+    text-align: center;
     background-image: url(../../images/header/comp.png);
-position: relative;
-    // background-repeat: no-repeat;
-    //   background-position: top;
+    position: relative;
     background-size: cover;
     background-position: center;
-    //   text-align: center;
-    //   position: relative;
-    //   z-index: 1;
+
 }
 
 .wraper {
     background-color: #27262A;
     height: 103px;
 
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
         height: 118px;
 
     }
@@ -53,7 +49,7 @@ position: relative;
 .header-menu {
     display: flex;
     flex-direction: column;
-    // gap: 50px;
+
     position: relative;
     justify-content: space-around;
     height: 103px;
@@ -65,7 +61,7 @@ position: relative;
         padding-top: 34px;
 
 
-        @media (min-width: 481px) {
+        @media (min-width: $tablet) {
             padding-top: 21px;
             justify-content: space-between;
             padding-left: 20px;
@@ -73,7 +69,7 @@ position: relative;
 
         }
 
-        @media (min-width: 993px) {
+        @media (min-width: $desktop) {
             padding-top: 31px;
 
 
@@ -88,7 +84,7 @@ position: relative;
 
     ul {
         list-style: none;
-        color: #8D81AC;
+        color: $color-primery;
 
     }
 
@@ -115,16 +111,16 @@ position: relative;
     font-weight: 700;
     font-size: 24px;
     line-height: 16px;
-    color: #8D81AC;
+    color: $color-primery;
     text-transform: uppercase;
     padding-top: 14px;
     margin-left: 17px;
 
     &:hover {
-        color: #FFFFFF;
+        color: $color-white;
     }
 
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
         display: flex;
 
     }
@@ -132,17 +128,19 @@ position: relative;
 }
 
 .header-nav {
-    // opacity: 0;
-    // display: none;
+
     margin: 0 auto;
     padding-top: 23px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
 
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
         display: flex;
 
     }
 
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
         position: absolute;
         top: 35px;
         right: 283px;
@@ -150,64 +148,60 @@ position: relative;
 }
 
 .header-nav_list {
-    // display: none;
+
     opacity: 0;
     list-style: none;
     display: flex;
     align-items: center;
-    
-    @media (min-width: 481px) {
-        opacity: 1; 
+
+    @media (min-width: $tablet) {
+        opacity: 1;
         gap: 47px;
     }
 }
 
 .header-nav_link {
-    color: #FFFFFF;
-    @media (min-width: 481px) {
-        color: #8D81AC; 
+    color: $color-white;
+
+    @media (min-width: $tablet) {
+        color: $color-primery;
         gap: 47px;
     }
-    
-    // font-weight: 700;
-    // font-size: 16px;
-    // line-height: 18px;
+
 
     &:hover {
-        color: #FFFFFF;
+        color: $color-white;
     }
 }
 
 .header-menu_btn {
-    background-color: #8d81ac;
-    color: #fff;
+    background-color: $color-primery;
+    color: $color-white;
     font-weight: 700;
     border-radius: 40px;
     padding: 11px 35px;
-    // margin-left: 50px;
+
     font-size: 16px;
     line-height: 17px;
     border: none;
     cursor: pointer;
 
     &:hover {
-        color: #8D81AC;
-        background-color: #FFFFFF;
+        color: $color-primery;
+        background-color: $color-white;
     }
 }
 
 .header-menu_burger {
-    color: #fff;
-    // width: 26px;
-    // height: 21px;
+    color: $color-white;
     border: none;
     display: flex;
     align-items: center;
-position: relative;
+    position: relative;
     font-size: 3rem;
     background-color: #27262a;
 
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
         display: none;
 
     }
@@ -215,8 +209,8 @@ position: relative;
 }
 
 .svg-menu_burger-clouse {
-   opacity: 0;
-    width: 42px ;
+    opacity: 0;
+    width: 42px;
     height: 40px;
     position: absolute;
     top: 0%;
@@ -225,71 +219,79 @@ position: relative;
 }
 
 
-.header_title{
+.header_title {
     font-weight: 700;
-font-size: 48px;
-line-height: 48px;
-color: #FFFFFF;
-margin-top: 50px;
-@media (min-width: 481px) {
-    font-size: 72px;
-    line-height: 72px;
-    margin-top: 69px;
+    font-size: 48px;
+    line-height: 48px;
+    color: $color-white;
+    margin-top: 50px;
+
+    @media (min-width: $tablet) {
+        font-size: 72px;
+        line-height: 72px;
+        margin-top: 69px;
+    }
+
+    @media (min-width:$desktop) {
+        font-size: 82px;
+        line-height: 82px;
+    }
 }
-@media (min-width: 993px) {
-    font-size: 82px;
-    line-height: 82px;
-}
-}
-.header_slogan{
+
+.header_slogan {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    color:#8D81AC;
-margin: 19px 0 14px;
-@media (min-width: 481px) {
-    font-size: 24px;
-    
+    color: $color-primery;
+    margin: 19px 0 14px;
+
+    @media (min-width: $tablet) {
+        font-size: 24px;
+
+    }
+
+    @media (min-width: $desktop) {
+        font-size: 30px;
+
+    }
 }
-@media (min-width: 993px) {
-    font-size: 30px;
-  
-}
-}
-.header_product-version{
-font-weight: 400;
-font-size: 14px;
-line-height: 14px;
-color: #848E97;
+
+.header_product-version {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-lowgray;
 
 }
 
 
-.header-btn_download{
+.header-btn_download {
     font-weight: 700;
-font-size: 18px;
-line-height: 20px;
-padding: 15px 29px;
-background: #8D81AC;
-border-radius: 40px;
-color: #FFFFFF;
-position: absolute;
-top: 96%;
-left: 0;
-right: 0;
-width: 290px;
-height: 45px;
-margin:auto;
-border: none;
-@media (min-width: 481px) {
-    width: 390px;
-    height: 62px;
-    font-size: 21px;
-line-height: 22px;
-}
-&:hover{
-    color: #8D81AC;
-    background: #FFFFFF;
-border: 2px solid #8D81AC;
-}
+    font-size: 18px;
+    line-height: 20px;
+    padding: 15px 29px;
+    background: $color-primery;
+    border-radius: 40px;
+    color: $color-white;
+    position: absolute;
+    top: 96%;
+    left: 0;
+    right: 0;
+    width: 290px;
+    height: 45px;
+    margin: auto;
+    border: none;
+
+    @media (min-width: $tablet) {
+        width: 390px;
+        height: 62px;
+        font-size: 21px;
+        line-height: 22px;
+    }
+
+    &:hover {
+        color: $color-primery;
+        background: $color-white;
+        border: 2px solid #8D81AC;
+    }
 }
