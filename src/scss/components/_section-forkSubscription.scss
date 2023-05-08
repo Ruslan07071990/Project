@@ -115,9 +115,9 @@
     width: 299px;
   }
   
-  @media (min-width: 480px) {
+  @media (min-width: $tablet) {
     .pricing {
-      background-image: url(../images/bg-pricing.png);
+      background-image: url(../images/layer1.png);
       background-position: center;
       background-size: cover;
       background-color: rgba(0, 0, 0, 0);
@@ -144,7 +144,7 @@
       }
     }
   }
-  @media (min-width: 993px) {
+  @media (min-width: $desktop) {
     .pricing-list {
       max-width: 1200px;
       padding-top: 60px;
