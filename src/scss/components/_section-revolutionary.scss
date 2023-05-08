@@ -1,0 +1,82 @@
+@import '../scss/abstracts/variables';
+@import '../scss/abstracts/mixins';
+
+.revolutionary {
+    padding: 90px 15px;
+    text-align: center;
+    &__title {
+      color: $color-primery;
+      font-size: 26px;
+      margin-bottom: 27px;
+    }
+    &__discription {
+      max-width: 861px;
+      margin: auto;
+      font-size: 14px;
+    }
+  }
+
+  li {
+        list-style-type: none;
+       
+      }
+
+  .revolutionary-buttons {
+    display: flex;
+    max-width: 500px;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    margin-top: 36px;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(27, 6, 6, 0.13);
+    border-radius: 8px;
+    color: black;
+    font-weight: 400;
+    &__text svg {
+      margin-right: 5px;
+    }
+    &__text {
+      display: flex;
+      align-items: center;
+      padding: 5px 14.1px;
+      border-right: 1px solid rgb(27, 31, 36, 0.04);
+      margin: 0;
+      background-color: rgba(237, 230, 230, 0.333);
+    }
+    &__number {
+      padding: 6px;
+    }
+  }
+  
+  @media (min-width: $tablet) {
+    .revolutionary {
+      padding: 90px 15px;
+      &__title {
+        font-size: 42px;
+        margin-bottom: 33px;
+      }
+      &__discription {
+        font-size: 21px;
+      }
+    }
+    .revolutionary-buttons {
+      margin-top: 24px;
+    }
+  }
+  @media (min-width: $desktop) {
+    .revolutionary {
+      padding: 66px 0 70px 0;
+      &__title {
+        font-size: 54px;
+      }
+    }
+  }
+  
