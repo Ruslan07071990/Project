@@ -1,0 +1,121 @@
+@import '../scss/abstracts/variables';
+@import '../scss/abstracts/mixins';
+
+.features {
+    padding-top: 32px;
+    font-family: 'Montserrat', "sans serif";
+    text-decoration: none;
+    &-title {
+      text-align: center;
+      color: $color-primery;
+      font-weight: 700;
+      font-size: 32px;
+    }
+    &__list {
+      margin: 0;
+      padding-top: 32px;
+    }
+    &__link {
+      font-weight: 400;
+      text-decoration: none;
+    }
+    &__item {
+      line-height: normal;
+      margin-bottom: 38px;
+    }
+    &__list-icon {
+      margin: auto;
+      display: block;
+    }
+    &__list-title {
+      font-size: 16px;
+      text-align: center;
+      margin: 27px 0 14px;
+      font-weight: 400;
+      color: $color-darkgray;
+    }
+    &__list-discription {
+      font-size: 14px;
+      text-align: center;
+      line-height: 21px;
+      color: $color-lowgray;
+      @media (max-width: 480px) {
+        
+      }
+    }
+    &__img {
+      height: 519px;
+      margin-left: auto;
+    }
+  }
+  
+  @media (min-width: $tablet) {
+    .features {
+      padding-top: 62px;
+      &-title {
+        font-size: 42px;
+      }
+      &__list {
+        padding: 50px 22px 0 30px;
+      }
+      &__item {
+        margin-bottom: 60px;
+      }
+      &__link {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+      }
+  
+      &__list-title {
+        text-align: start;
+        margin: 0 0 5px;
+      }
+      &__list-discription {
+        text-align: start;
+      }
+      &__list-icon {
+        margin: 0;
+        max-height: 90px;
+      }
+      &__container-discription {
+        padding-left: 35px;
+      }
+    }
+  }
+  @media (min-width: $desktop) {
+    .container-content-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "a b";
+    }
+    .features {
+      background-color: #F4F4F4;
+      padding: 98px 0 33px;
+      &__list-title {
+        text-align: start;
+        margin: 0 0 10px;
+      }
+      &__list-icon {
+        margin-bottom: auto;
+      }
+      &__list {
+        padding: 20px 22px 30px;
+      }
+      &__item {
+        max-width: 540px;
+        margin-bottom: 50px;
+      }
+      &-title {
+        font-size: 48px;
+        margin-bottom: 18px;
+        grid-area: b;
+      }
+      .contaier-img {
+        grid-area: b;
+        margin-top: 70px;
+      }
+    }
+  }
+  
+  
