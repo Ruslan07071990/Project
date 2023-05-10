@@ -23,7 +23,7 @@ const scss = () => {
 
 
 const html =()=>{
-    return gulp.src('./src/**/*.html')
+    return gulp.src('./index.html')
     .pipe(fileinclude())
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('./dist'))
